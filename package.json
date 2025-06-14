@@ -4,15 +4,25 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev":"nodemon Server/server.js",
-    "start":"node Server/server.js"
+    "dev": "nodemon Server/server.js",
+    "start": "node Server/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "mongoose": "^8.15.1",
     "nodemon": "^3.1.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulrahman1215/Real-Estate-webApplication.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abdulrahman1215/Real-Estate-webApplication/issues"
+  },
+  "homepage": "https://github.com/abdulrahman1215/Real-Estate-webApplication#readme",
+  "description": ""
 }
