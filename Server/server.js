@@ -2,11 +2,16 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRouter from './routes/user.route.js';
+import authRouter from './routes/auth.route.js';
 
 dotenv.config();
 
 const app = express();
+
+app.use(express.json());
 const PORT = 3000;
+
+
 
 console.log("MONGO_URI =", process.env.MONGO_URI);
 
@@ -14,6 +19,8 @@ console.log("MONGO_URI =", process.env.MONGO_URI);
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ Error connecting to MongoDB:", err));
+
+
 
 app.get('/', (req, res) => {
   res.send("API is running...");
@@ -24,3 +31,4 @@ app.listen(PORT, () => {
 });
 
 app.use('/api/user', userRouter);
+app.use('/api/auth', authRouter);
