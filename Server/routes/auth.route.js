@@ -1,12 +1,11 @@
-import { sign } from 'crypto';
 import express from 'express';
-import { google, signup, signin } from '../controllers/auth.controller.js';
-import router from './user.route.js';
+import { google, signOut, signin, signup } from '../controllers/auth.controller.js';
 
-const route = express.Router();
+const router = express.Router();
 
 router.post("/signup", signup);
 router.post("/signin", signin);
-route.post('/google' , google);
+router.post('/google', google);
+router.get('/signout', signOut)
 
 export default router;
