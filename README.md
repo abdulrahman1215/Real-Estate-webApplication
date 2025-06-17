@@ -32,7 +32,7 @@ Whether you're a first-time buyer, seasoned investor, or someone looking for a r
 - React Router
 - Firebase Authentication & Storage
 
-**Backend (optional if separate):**
+**Backend 
 - Node.js
 - Express
 - MongoDB
